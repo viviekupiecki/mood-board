@@ -1,0 +1,6 @@
+.embed-iframe {
+  top: 15%;
+  right: 2%;
+  box-shadow: 10 10 rgb(0, 0, 0.4);
+  transform: translateY(-50%);
+}

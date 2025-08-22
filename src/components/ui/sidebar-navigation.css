@@ -1,0 +1,54 @@
+.sidenav {
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+    height: 100vh;
+    background-color: hsl(171 33% 20%);
+    padding-top: 28px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.sidenavClosed {
+    composes: sidenav;
+    transition: width 0.3s ease-in-out;
+    width: 60px;
+}
+ 
+.sideitem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: hsl(20, 15%, 92%);
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+ 
+.linkText {
+    padding-left: 16px;
+}
+ 
+.linkTextClosed {
+    composes: linkText;
+    visibility: hidden;
+}
+ 
+.sideitem:hover {
+    background-color: hsla(20, 15%, 92%, 0.667);
+    color: hsl(170, 15%, 31%);
+
+}
+ 
+.menuBtn {
+    align-self: center;
+    align-self: flex-start; 
+    justify-self: flex-end;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.menuBtn:hover {
+    blackground-color: hsl(188 26% 82%);
+
+}
