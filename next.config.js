@@ -2,7 +2,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
 module.exports = withBundleAnalyzer({
-    // your Next.js configuration
     images: {
         domains: ["i.scdn.co"],
         // Add image optimization settings
@@ -48,6 +47,14 @@ module.exports = withBundleAnalyzer({
                         value: '1; mode=block',
                     },
                 ],
+            },
+        ];
+    },
+    async rewrites() {
+        return [
+            {
+                source: '/api/:path*',
+                destination: 'http://localhost:5000/:path*',
             },
         ];
     },

@@ -45,13 +45,10 @@ function HomePage() {
   };
 
   return (
-    <div
-      className="flex flex-col w-full p-2"
-      // style={{ marginTop: "10px", marginLeft: "10px", marginRight: "25px" }}
-    >
+    <div className="p-1">
       <div className="text-lg pb-2 font-semibold">Welcome</div>
 
-      <div className="grid grid-cols-3 space-x-4">
+      <div className="gap-6 flex items-center">
         <Avatar />
         <SpotifyEmbed />
         {/* <ReactWeather

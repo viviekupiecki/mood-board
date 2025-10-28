@@ -2,6 +2,10 @@ import type { Config } from "tailwindcss"
 
 const config = {
 	darkMode: ["class"],
+	fontFamily: {
+		display: ['Oswald', 'sans-serif'],
+		body: ['"Noto Sans"', 'serif'],
+	},
 	content: [
 		'./pages/**/*.{ts,tsx}',
 		'./components/**/*.{ts,tsx}',
@@ -18,51 +22,68 @@ const config = {
 			}
 		},
 		extend: {
-			colors: {
-				primary: {
-					DEFAULT: '#0D2C44', // Dark Navy
-					foreground: '#F1F5F9' // Lighter but not too light for contrast
-				},
-				secondary: {
-					DEFAULT: '#A8BFAE', // Muted green
-					foreground: '#1F2A29' // Keeps dark green for good contrast
-				},
-				accent: {
-					DEFAULT: '#e5e8f0', // Light beige
-					foreground: '#1A3A4C' // A step darker than navy for crisper text
-				},
-				background: '#F1F3F7', // Fixed: added missing #
-				foreground: '#1A3A4C', // Dark Navy text (good on light backgrounds)
-				border: '#4C5C68', // Muted border
-				ring: '#A8BFAE', // Muted green ring for focus states
-				muted: {
-					DEFAULT: '#3B4A55', // Muted navy
-					foreground: '#D1D8D9' // Light gray text (not pure white)
-				},
-				destructive: {
-					DEFAULT: '#D14B5C', // Soft red
-					foreground: '#FFFFFF' // Ensure high contrast
-				},
-				popover: {
-					DEFAULT: '#0D2C44', // Match primary
-					foreground: '#F1F5F9' // Consistent with other text
-				},
-				card: {
-					DEFAULT: '#e5e8f0', // Light gray-blue
-					foreground: '#1A3A4C' // Slightly brighter navy
-				},
-				sidebar: {
-					DEFAULT: '#0D2C44',
-					foreground: '#D1D8D9',
-					primary: '#A8BFAE',
-					'primary-foreground': '#1F2A29',
-					accent: '#C5CBDD',
-					'accent-foreground': '#0D2C44',
-					border: '#4C5C68',
-					ring: '#A8BFAE',
-					hover: '#1A3A4C' // Slightly lighter navy for hover contrast
-				}
-			},
+colors: {
+  primary: {
+    500: '#0D2C44',  // Dark Navy (original DEFAULT)
+    400: '#154463',  // Slightly lighter shade for hover/focus states
+    600: '#0A2237',  // Darker shade for active states
+    foreground: '#F1F5F9',
+  },
+  secondary: {
+    500: '#A8BFAE',  // Muted green (original DEFAULT)
+    400: '#BACDBA',  // Lighter shade
+    600: '#91A88F',  // Darker shade
+    foreground: '#1F2A29',
+  },
+  accent: {
+    500: '#e5e8f0',  // Light beige original
+    400: '#f0f2f9',  // Lighter for backgrounds
+    600: '#c1c6d1',  // Darker for borders or text
+    foreground: '#1A3A4C',
+  },
+  background: '#F1F3F7',
+  foreground: '#1A3A4C',
+  border: '#4C5C68',
+  ring: '#A8BFAE',
+  muted: {
+    500: '#3B4A55',
+    400: '#526374',
+    600: '#2a3943',
+    foreground: '#D1D8D9',
+  },
+  destructive: {
+    500: '#D14B5C',
+    400: '#de6a72',
+    600: '#a93b46',
+    foreground: '#FFFFFF',
+  },
+  popover: {
+    500: '#0D2C44',
+    400: '#154463',
+    600: '#0A2237',
+    foreground: '#F1F5F9',
+  },
+  card: {
+    500: '#e5e8f0',
+    400: '#f0f2f9',
+    600: '#c1c6d1',
+    foreground: '#1A3A4C',
+  },
+  sidebar: {
+    500: '#0D2C44',
+    400: '#154463',
+    600: '#0A2237',
+    foreground: '#D1D8D9',
+    primary: '#A8BFAE',
+    'primary-foreground': '#1F2A29',
+    accent: '#C5CBDD',
+    'accent-foreground': '#0D2C44',
+    border: '#4C5C68',
+    ring: '#A8BFAE',
+    hover: '#1A3A4C',
+  },
+},
+
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
