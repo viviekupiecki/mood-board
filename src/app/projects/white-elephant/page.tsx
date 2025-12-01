@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AiFillGift } from "react-icons/ai";
 import {
@@ -114,10 +114,14 @@ const WhiteElephantGame = () => {
   };
 
   return (
-    <>
-      <Card className="bg-slate-50 shadow-sm py-4 px-3 w-auto">
+    <div className="w-full min-w-0 p-6">
+      <Card className="">
+        <CardHeader>
+        <CardTitle>
+        <h1 className="font-semibold">White Elephant</h1>
+        </CardTitle>
+        </CardHeader>
         <CardContent>
-          <h1 className="font-semibold">White Elephant</h1>
           <div>
             {participants.map((participant, index) => (
               <div key={index} className="flex items-center space-x-4 mb-2">
@@ -196,19 +200,19 @@ const WhiteElephantGame = () => {
                 <h2 className="py-2">
                   It’s {participants[currentPlayerIndex]?.firstName}’s turn!
                 </h2>
-                <div className="grid grid-cols-4 space-x-4">
+                <div className="grid grid-cols-4 space-x-3">
                   {availableGifts.map((gift, index) => (
-                    <Card
+                    <div
                       key={index}
-                      // className={`min-w-40 w-fit p-4 mb-4 ${
-                      //   gift.available ? "cursor-pointer" : "opacity-50"
-                      // }`}
+                      className={`p-4 mb-4 ${
+                        gift.available ? "cursor-pointer" : "opacity-30 cursor-not-allowed"
+                      }`}
                       onClick={() => gift.available && selectGift(index)}
                     >
                       <AiFillGift className={`${gift.color} w-10 h-10`} />
                       <span>{gift.name}</span>
                       {/* <Input type="text" /> */}
-                    </Card>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -216,7 +220,7 @@ const WhiteElephantGame = () => {
           </div>
         </CardContent>
       </Card>
-    </>
+    </div>
   );
 };
 

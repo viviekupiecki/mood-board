@@ -11,8 +11,10 @@ export function Providers({
   defaultOpen: boolean;
 }) {
   return (
-    <CustomProvider theme="dark">
-      <SidebarProvider defaultOpen={defaultOpen}>{children}</SidebarProvider>
+    <CustomProvider theme="light">
+      <SidebarProvider defaultOpen={defaultOpen}>
+        {children}
+      </SidebarProvider>
     </CustomProvider>
   );
 }

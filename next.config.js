@@ -2,6 +2,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
 module.exports = withBundleAnalyzer({
+    turbopack: {
+        root: __dirname,
+    },
     images: {
         domains: ["i.scdn.co"],
         // Add image optimization settings

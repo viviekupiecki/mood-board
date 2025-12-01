@@ -14,10 +14,10 @@ const Clock = () => {
   }, []);
 
   return (
-    <>
+    <div className="w-full min-w-0 p-6">
       <h1>Global Clock</h1>
       <p>{format(clockTime, "PPP")}</p>
-    </>
+    </div>
   );
 };
 

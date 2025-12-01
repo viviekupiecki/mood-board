@@ -34,18 +34,18 @@ const SideNav: React.FC<SideNavProps> = (title) => {
     <Sidebar collapsible="icon" side="left">
       <SidebarContent>
         <SidebarGroup className="p-4">
-          <SidebarGroupLabel className="group/label text-sm text-sidebar-500 hover:text-sidebar-600 ">
+          <SidebarGroupLabel className="group/label text-sm">
             Table of Contents
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {sideNavData.map((data) => (
-                <SidebarMenuItem key={data.id} className="text-sidebar-400 ">
+                <SidebarMenuItem key={data.id}>
                   <SidebarMenuButton asChild>
-                    <a href={data.link}>
+                    <Link href={data.link}>
                       <data.icon />
                       <span>{data.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -53,7 +53,7 @@ const SideNav: React.FC<SideNavProps> = (title) => {
             <SidebarMenu>
               <Collapsible defaultOpen className="group/collapsible">
                 <CollapsibleTrigger asChild>
-                  <SidebarMenuButton className="text-primary-400">
+                  <SidebarMenuButton className="">
                     <AiFillProject />
                     <span>My Projects</span>
                     <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
@@ -62,7 +62,7 @@ const SideNav: React.FC<SideNavProps> = (title) => {
                 <CollapsibleContent>
                   <SidebarMenuSub>
                     {sideNavProjectsData.map((data) => (
-                      <SidebarMenuItem key={data.id} className="text-primary-600">
+                      <SidebarMenuItem key={data.id}>
                         <SidebarMenuButton asChild>
                           <Link href={data.link}>
                             <data.icon />

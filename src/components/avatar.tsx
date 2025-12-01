@@ -13,25 +13,25 @@ import "./avatar.css";
 
 const Avatar: React.FC<AvatarProps> = ({ className, ...props }) => {
   return (
-    <Card className="bg-muted-foreground/70 h-3/4">
+    <Card className="min-h-[187px]">
       <CardHeader>
-        <CardTitle className="pb-2">Vivienne Kupiecki</CardTitle>
+        <CardTitle>Vivienne Kupiecki</CardTitle>
       </CardHeader>
       <CardContent className="grid col-span-3 gap-3 items-center">
-        <div className="inline-flex">
-          <div className="pb-2 pl-1">23</div>
-          <div className="px-1">|</div>
+        <div className="flex items-center gap-x-2">
+          <div>23</div>
+          <div>|</div>
           <div>UI Designer, Front-end Developer</div>
         </div>
-        <div className="grid grid-cols-3 gap-3 items-center">
-          <div className="inline-flex">
+        <div className="grid grid-cols-3 gap-3">
+          <div className="flex items-center gap-x-2">
             <AiOutlineSun />
             Taurus
           </div>
-          <div className="inline-flex">
+          <div className="flex items-center gap-x-2">
             <AiOutlineMoon /> Aries
           </div>
-          <div className="inline-flex">
+          <div className="flex items-center gap-x-2">
             <AiOutlineArrowUp /> Cancer{" "}
           </div>
         </div>
