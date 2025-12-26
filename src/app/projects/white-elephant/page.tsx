@@ -118,7 +118,7 @@ const WhiteElephantGame = () => {
       <Card className="">
         <CardHeader>
         <CardTitle>
-        <h1 className="font-semibold">White Elephant</h1>
+        <div className="font-semibold">White Elephant</div>
         </CardTitle>
         </CardHeader>
         <CardContent>
