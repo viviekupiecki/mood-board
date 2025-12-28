@@ -4,11 +4,7 @@ import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AiFillGift } from "react-icons/ai";
-import {
-  BsCheck2Circle,
-  BsPlusCircle,
-  BsTrash3Fill,
-} from "react-icons/bs";
+import { BsCheck2Circle, BsPlusCircle, BsTrash3Fill } from "react-icons/bs";
 import {
   Table,
   TableBody,
@@ -117,9 +113,9 @@ const WhiteElephantGame = () => {
     <div className="w-full min-w-0 p-6">
       <Card className="">
         <CardHeader>
-        <CardTitle>
-        <div className="font-semibold">White Elephant</div>
-        </CardTitle>
+          <CardTitle>
+            <div className="font-semibold">White Elephant</div>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div>
@@ -205,7 +201,9 @@ const WhiteElephantGame = () => {
                     <div
                       key={index}
                       className={`p-4 mb-4 ${
-                        gift.available ? "cursor-pointer" : "opacity-30 cursor-not-allowed"
+                        gift.available
+                          ? "cursor-pointer"
+                          : "opacity-30 cursor-not-allowed"
                       }`}
                       onClick={() => gift.available && selectGift(index)}
                     >
